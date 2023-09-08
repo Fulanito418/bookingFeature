@@ -14,8 +14,6 @@ async function getMeetingRooms() {
   var config = {
     method: 'GET',
     url: 'https://app.officernd.com/api/v1/organizations/cohatch/resources?type=meeting_room&$populate=office.physicalAddress.city,office.physicalAddress.state,rate.price',
-    // url: 'https://app.officernd.com/api/v1/organizations/cohatch/resources?type=meeting_room&$populate=rate.price',
-    // url: 'https://app.officernd.com/api/v1/organizations/cohatch/resources?type=event_space&$populate=rate.price',
     headers: {
         accept: 'application/json',
         authorization: `Bearer ${token}`
@@ -52,6 +50,3 @@ async function getOfficerndMeetingRoomsController(req, res, next) {
 }
 
 export default getOfficerndMeetingRoomsController;
-
-
-
